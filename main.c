@@ -3,6 +3,18 @@
 #include <string.h>
 #include <locale.h>
 
+// funçao exercicio 3
+int palindromo(char str[]){ // int para retornar um valor inteiro
+    int i, j;
+    j = strlen(str) - 1;
+
+    for (i = 0; i < j; i++, j--) {
+        if (str[i] != str[j])
+            return 0;
+    }
+    return 1;
+}
+
 void verificaSubstring(){
     // Criando variáveis:
     char primeiraString[50], segundaString[50];
@@ -48,16 +60,15 @@ int main(){
     int exercicios;
     int n_fatorial;
 
+    char palavra[100]; // para o exercício 3
+
     do{
-    printf(" ----------------------\n");
-    printf("   MENU DE EXERCÍCIOS\n");
-    printf(" ----------------------\n");
-    printf("1- Sequência de Fibonacci\n");
-    printf("2- Fatoriais\n");
-    printf("3- Verificar Palíndromo\n");
-    printf("4- Verificar Substring\n");
-    printf("0- Sair\n");
-    printf("Selecione uma das quatro opções de exercícios: ");
+     printf("===== MENU DE EXERCÍCIOS ====="
+           "\n1 - Sequência de Fibonacci;"
+           "\n2 - Fatoriais;"
+           "\n3 - Verificar Palíndromo;"
+           "\n4 - Verificar Substring.\n"
+           "\nEscolha um exercício:\t");
     scanf("%d", &exercicios);
     getchar();
 
@@ -70,6 +81,13 @@ int main(){
                 break;
             case 3:
                 printf("\nVocê selecionou a opção 3.\n");
+                printf("\nDigite uma palavra:\t");
+                scanf("%s", palavra);
+
+                if (palindromo(palavra))
+                    printf("\nA palavra é um palíndromo.");
+                else
+                    printf("\nA palavra NÃO é um palíndromo.");
                 break;
             case 4:
                 printf("\nVocê selecionou a opção 4.\n");
