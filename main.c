@@ -3,6 +3,34 @@
 #include <string.h>
 #include <locale.h>
 
+//função 1
+void fibonacci() {
+    int n, i;
+    int vetor[50]; 
+
+    printf("Digite a quantidade de termos da sequencia de Fibonacci (1 a 50): ");
+    scanf("%d", &n);
+
+    if (n < 1 || n > 50) {
+        printf("Número inválido. Deve estar entre 1 e 50.\n");
+        return;
+    }
+
+    vetor[0] = 0;
+    if (n > 1) {
+        vetor[1] = 1;
+        for (i = 2; i < n; i++) {
+            vetor[i] = vetor[i - 1] + vetor[i - 2];
+        }
+    }
+
+    printf("Sequencia de Fibonacci: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", vetor[i]);
+    }
+    printf("\n");
+}
+
 // funçao exercicio 3
 int palindromo(char str[]){ // int para retornar um valor inteiro
     int i, j;
