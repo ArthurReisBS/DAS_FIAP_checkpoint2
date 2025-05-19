@@ -125,6 +125,7 @@ int main(){
 
     switch (exercicios) {
             case 1:
+                fibonacci();
                 printf("\nVocê selecionou a opção 1.\n");
                 break;
             case 2:
