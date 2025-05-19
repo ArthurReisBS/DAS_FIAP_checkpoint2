@@ -121,7 +121,7 @@ int main(){
     char palavra[100]; // para o exercício 3
 
     do{
-     printf("===== MENU DE EXERCÍCIOS ====="
+     printf("\n===== MENU DE EXERCÍCIOS ====="
            "\n1 - Sequência de Fibonacci;"
            "\n2 - Fatoriais;"
            "\n3 - Verificar Palíndromo;"
@@ -145,9 +145,9 @@ int main(){
                 scanf("%s", palavra);
 
                 if (palindromo(palavra))
-                    printf("\nA palavra é um palíndromo.");
+                    printf("\nA palavra é um palíndromo.\n");
                 else
-                    printf("\nA palavra NÃO é um palíndromo.");
+                    printf("\nA palavra NÃO é um palíndromo.\n");
                 break;
             case 4:
                 printf("\nVocê selecionou a opção 4.\n");
