@@ -31,6 +31,29 @@ void fibonacci() {
     printf("\n");
 }
 
+//função exercício 2
+int exercicio_fatoriais() {
+    int n_fatorial, i;
+    long long fatorial;
+    long long fatoriais[21];
+    fatoriais[0] = 1;
+
+    for (i = 1; i <= 20; i++) {
+        fatoriais[i] = fatoriais[i - 1] * i;
+    }
+
+    do {
+        printf("Digite um número inteiro entre 1 e 20: ");
+        scanf("%d", &n_fatorial);
+        if (n_fatorial < 1 || n_fatorial > 20)
+            printf("Número inválido, tente novamente.\n");
+    } while (n_fatorial < 1 || n_fatorial > 20);
+
+    for (i = 1; i <= n_fatorial; i++) {
+        printf("%d! = %lld\n", i, fatoriais[i]);
+    }
+}
+
 // funçao exercicio 3
 int palindromo(char str[]){ // int para retornar um valor inteiro
     int i, j;
@@ -106,6 +129,7 @@ int main(){
                 break;
             case 2:
                 printf("\nVocê selecionou a opção 2.\n");
+                exercicio_fatoriais();
                 break;
             case 3:
                 printf("\nVocê selecionou a opção 3.\n");
