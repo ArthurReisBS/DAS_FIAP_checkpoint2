@@ -3,6 +3,13 @@
 #include <string.h>
 #include <locale.h>
 
+//Nome e RM dos integrantes:
+//Anny Elly (565055) - Exercício 1
+//Arthur Reis (562181) - Exercício 4
+//Leonardo Piassa (563663) - Exercício 3
+//Manoela Oliveira (563952) - Exercício 2
+
+
 //função 1
 void fibonacci() {
     int n, i;
